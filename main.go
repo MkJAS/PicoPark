@@ -13,7 +13,7 @@ func main() {
 
 	test := breeder.MakeAnimals()
 
-	fmt.Println(test[0].Speak())
+	fmt.Println(test[0].GetId())
 	fmt.Println(test[3].GetId())
 
 }

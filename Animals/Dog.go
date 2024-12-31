@@ -15,11 +15,11 @@ func (d dog) Speak() string {
 func NewDog() *dog {
 	d := &dog{}
 
-	p := ParkManager.Manager{}
+	p := ParkManager.GetInstance()
 
-	dawg := p.GiveId("dog")
+	//dawg := p.GiveId("dog")
 
-	d.setId(dawg)
+	d.setId(p.GiveId("dog"))
 
 	return d
 }
