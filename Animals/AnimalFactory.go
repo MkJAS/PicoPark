@@ -8,7 +8,7 @@ func (af AnimalFactory) MakeAnimals() []Animal {
 	animalsSlice := []Animal{}
 
 	animalsSlice = append(animalsSlice,
-		cat{}, dog{}, dog{}, cat{})
+		NewCat(), NewDog(), NewDog(), NewCat())
 
 	return animalsSlice
 }

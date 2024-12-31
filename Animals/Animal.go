@@ -7,10 +7,11 @@ type Coords struct {
 
 type Animal interface {
 	Speak() string
-	getId() int
+	GetId() int
 	getLocation() Coords
 	setLocation(x float64, y float64)
 	getName() string
+	setId(id int)
 }
 
 type AnimalInterface struct {
@@ -19,8 +20,11 @@ type AnimalInterface struct {
 	location Coords
 }
 
-func (ai AnimalInterface) getId() int {
+func (ai AnimalInterface) GetId() int {
 	return ai.id
+}
+func (ai *AnimalInterface) setId(idNum int) {
+	ai.id = idNum
 }
 func (ai AnimalInterface) getLocation() Coords {
 	return ai.location

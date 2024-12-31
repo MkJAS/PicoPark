@@ -7,12 +7,13 @@ import (
 
 func main() {
 
-	fmt.Println("Dog")
+	fmt.Println("Generating Park")
 
 	breeder := animals.AnimalFactory{}
 
 	test := breeder.MakeAnimals()
 
 	fmt.Println(test[0].Speak())
+	fmt.Println(test[3].GetId())
 
 }
